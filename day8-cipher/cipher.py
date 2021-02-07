@@ -8,30 +8,23 @@ print(art.logo)
 
 runprogram = True
 
-#initialize list
-cipher_text=[]
-
 def caesar(text, shift, direction):
   cipher = ""
   if direction == "decode":
     for x in text:
       start_index = alphabet.index(x)
-      end_index = (int(start_index) - (shift))
+      end_index = ((start_index) - (shift))
       if end_index < 0:
         end_index = (end_index + 26)
-      cipher_text.append(alphabet[end_index])
-    for items in cipher_text:
-      cipher += items
+      cipher += (alphabet[end_index])
     print("Your plain text is:")
   else:
     for x in text:
       start_index = alphabet.index(x)
-      end_index = (int(start_index) + (shift))
+      end_index = ((start_index) + (shift))
       if end_index >= 26:
         end_index = (end_index - 26)
-      cipher_text.append(alphabet[end_index])
-    for items in cipher_text:
-      cipher += items
+      cipher += (alphabet[end_index])
     print("Your cipher text is:") 
   print(cipher)
 
